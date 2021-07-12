@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import NewNote from './components/newNotes'
+import Notes from './components/Notes';
 
-function App() {
+const App = () => {
+  
+  const filterSelected = value => {
+    console.log(value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <div>
+         <NewNote></NewNote>
+         <div>
+           all
+           <input type='radio' name='filter' onChange={()=> filterSelected('ALL')}></input>
 
+           important
+           <input type='radio' name='filter' onChange={()=> filterSelected('IMPORTANT')}></input>
+
+           noimportant
+           <input type='radio' name='filter' onChange={()=> filterSelected('NO_IMPORTANT')}></input>
+           
+         </div>
+        <Notes></Notes>
+      </div>
+  )
+}
 export default App;
