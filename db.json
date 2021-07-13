@@ -1,14 +1,24 @@
 {
-    "notes": [
-        {
-            "content": "First Note",
-            "important": true,
-            "id": 1
-        },
-        {
-            "content": "Second Note BackEnd",
-            "important": true,
-            "id": 2
-        }
-    ]
+  "notes": [
+    {
+      "content": "First Note",
+      "important": true,
+      "id": 1
+    },
+    {
+      "content": "Second Note BackEnd",
+      "important": true,
+      "id": 2
+    },
+    {
+      "content": "nota 1",
+      "important": false,
+      "id": 3
+    },
+    {
+      "content": "nota 2",
+      "important": false,
+      "id": 4
+    }
+  ]
 }

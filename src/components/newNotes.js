@@ -5,7 +5,7 @@ export default function NewNote (){
 
     const dispatch = useDispatch()
 
-    const addNote=(event)=>{
+    const addNote= async (event)=>{
         event.preventDefault()
         const {target}= event
         const content = target.note.value

@@ -1,7 +1,8 @@
 import { noteReducer } from './reducers/noteREducer'
 import { filterReducer } from './reducers/filterReducer'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import {createStore, combineReducers} from 'redux'
+import {createStore, combineReducers, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
 
 
 const reducer = combineReducers({
@@ -9,5 +10,10 @@ const reducer = combineReducers({
     filter: filterReducer
 })
 
-export const store = createStore(reducer, composeWithDevTools())
+export const store = createStore(
+    reducer, 
+    composeWithDevTools(
+        applyMiddleware(thunk)
+    )
+)
 
